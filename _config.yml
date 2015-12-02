@@ -1,0 +1,26 @@
+# Site settings
+title: Osaka×GitHub Meetup!!
+email: k.takeuchi@warrantee.co.jp
+description: "[Todo: description]"
+# baseurl: "/OsakaGitHubMeetup"
+# url: "http://ogm.greenlatte.space"
+twitter_username: u651601f
+github_username:  green-latte
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+exclude:
+  - "bower_components"
+  - "node_modules"
+  - "bower.json"
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "Gruntfile.coffee"
+  - "package.json"
+  - "Rakefile"
+  - "README.md"
+
+include:
+  - .nojekyll

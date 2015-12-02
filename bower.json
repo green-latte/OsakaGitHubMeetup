@@ -1,0 +1,20 @@
+{
+  "name": "OsakaGitHubMeetup",
+  "version": "0.0.1",
+  "homepage": "https://github.com/green-latte/OsakaGitHubMeetup",
+  "authors": [
+    "Green Latte"
+  ],
+  "description": "[Todo: description]",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.2.0"
+  }
+}
