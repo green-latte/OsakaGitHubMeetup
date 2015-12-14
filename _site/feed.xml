@@ -5,9 +5,20 @@
     <description>[Todo: description]</description>
     <link>http://ogm.greenlatte.space/</link>
     <atom:link href="http://ogm.greenlatte.space/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 14 Dec 2015 15:38:00 +0900</pubDate>
-    <lastBuildDate>Mon, 14 Dec 2015 15:38:00 +0900</lastBuildDate>
+    <pubDate>Mon, 14 Dec 2015 17:34:31 +0900</pubDate>
+    <lastBuildDate>Mon, 14 Dec 2015 17:34:31 +0900</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Introduction</title>
+        <description>
+</description>
+        <pubDate>Thu, 03 Dec 2015 00:00:00 +0900</pubDate>
+        <link>http://ogm.greenlatte.space/2015/12/03/introduction2/</link>
+        <guid isPermaLink="true">http://ogm.greenlatte.space/2015/12/03/introduction2/</guid>
+        
+        
+      </item>
     
       <item>
         <title>Introduction</title>
@@ -17,7 +28,7 @@
 
 &lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://ogm.greenlatte.space/image/wiki-index.png&quot; alt=&quot;wiki-index&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;wiki-index&quot; src=&quot;https://dl.dropboxusercontent.com/u/39427047/github/OGM/wiki-index.png&quot; width=&quot;200&quot; height=&quot;200&quot; /&gt;&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
   &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;

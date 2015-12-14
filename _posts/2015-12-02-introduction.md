@@ -9,7 +9,7 @@ To add new posts, simply add a file in the `_posts` directory that follows the c
 
 Jekyll also offers powerful support for code snippets:
 
-![wiki-index]({{ site.url }}/image/wiki-index.png)
+<img alt="wiki-index" src="https://dl.dropboxusercontent.com/u/39427047/github/OGM/wiki-index.png" width="200" height="200" />
 
 {% highlight ruby %}
 def print_hi(name)

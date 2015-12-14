@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <link rel="stylesheet" href="{{ "/vendor/css/reveal.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/vendor/css/theme/white.css" | prepend: site.baseurl }}">
+  <body>
+    <div class="reveal">
+        <div class="slides">
+            <section>Single Horizontal Slide</section>
+            <section>
+                <section>Vertical Slide 1</section>
+                <section>Vertical Slide 2</section>
+            </section>
+        </div>
+    </div>
+    <script src="/vendor/js/reveal.js"></script>
+    <script src="/js/app.js"></script>
+  </body>
+</html>
