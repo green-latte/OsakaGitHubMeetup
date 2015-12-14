@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <link rel="stylesheet" href="{{ "/vendor/css/reveal.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/vendor/css/theme/white.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/vendor/lib/css/zenburn.css" | prepend: site.baseurl }}">
+  <!--Add support for earlier versions of Internet Explorer -->
+	<!--[if lt IE 9]>
+	<script src="/vendor/lib/js/html5shiv.js"></script>
+	<![endif]-->
+  <body>
+    <div class="reveal slide center">
+        <div class="slides">
+
+          <section>
+            <h3>Wikiの作成とその後の開発フロー</h3>
+            <aside class="notes">
+              <p>APIのドキュメントをWikiに書き終えた後は、次にAPIに実装する機能をまずWikiに書く癖をつけました。</p>
+              <p>そうすることによって、APIを書き始める前に、APIの設計は初めて見る人にとって使いやすいかを考えることができるからです。</p>
+            </aside>
+          </section>
+
+          <section data-markdown>
+              <script type="text/template">
+                  # Git Flow
+              </script>
+          </section>
+
+          <section>
+            <h3>Git Flow</h3>
+            <ul>
+              <li><i>feature</i>: 新規機能開発中のブランチ</li>
+              <li><i>develop</i>: 開発済み(未検証)のブランチ</li>
+              <li><i>release</i>: 開発から運用に移行するまでの検証・リリース準備ブランチ</li>
+              <li><i>master</i>: 運用で使用されている本番用のプログラムを管理 (バグや未実装があってはいけない)</li>
+              <li><i>hotfix</i>: 運用で見つかったバグを即座に修正するためのブランチ</li>
+            </ul>
+            <aside class="notes">
+              <p>APIの設計をWikiに書くと、続いて実装していきます。</p>
+              <p>Git FlowはVincent Driessennが開発したGitブランチの綺麗な管理モデルで、</p>
+              <p>私のようにこれから実装する機能や修正する機能が事前に決まっている場合はとても有効です。</p>
+
+              <p>Gitではいろいろなプログラムの新規開発やバグの修正を自分の作業しているブランチにコミットしますが、</p>
+              <p>Git Flowという拡張機能をインストールすると、ブランチが「feature, develop, release, master, hotfix」に別れます。</p>
+            </aside>
+          </section>
+
+          <section>
+            <p>Git Flowの初期化</p>
+            <figure class="highlight"><pre><code class="language-sh" data-lang="sh">
+              $ git flow init
+               #&gt; branch: develop
+            </code></pre></figure>
+            <aside class="notes">
+              <p>WarranteeのAPIでは、ユーザーが登録した家電を中古売却査定に出すための機能がありますが、</p>
+              <p>こちらを実装する手順を元に、Git Flowについて簡単に解説していきます。</p>
+
+              <p>まず、Git Flowを既存のGitプロジェクトに追加する場合は、以下のコマンドを実行します。</p>
+            </aside>
+          </section>
+
+          <section>
+            <p>Featureブランチの作成</p>
+            <figure class="highlight"><pre><code class="language-sh" data-lang="sh">
+              $ git flow feature start sales-order
+               #&gt; branch: feature/sales-order
+            </code></pre></figure>
+            <aside class="notes">
+              <p>次に、設計に沿ってAPIの機能を実装していきますが、</p>
+              <p>この機能は新しいAPIの機能として実装するため、featureブランチを作成します。</p>
+
+              <p>今回は中古売却の査定を依頼するための機能を作成しますので、</p>
+              <p>sales-orderというブランチをfeatureとして作成しました。</p>
+            </aside>
+          </section>
+
+          <section>
+            <p>コミット</p>
+            <figure class="highlight"><pre><code class="language-sh" data-lang="sh">
+              $ git add --all
+              $ git commit -m 'ham spam egg...'
+              $ git push origin feature/sales-order
+            </code></pre></figure>
+            <aside class="notes">
+              <p>開発中は、モジュールを追加・修正するごとに細かくコミットしていきます。</p>
+            </aside>
+          </section>
+
+          <section>
+            <p>Featureブランチの終了</p>
+            <figure class="highlight"><pre><code class="language-sh" data-lang="sh">
+              $ git flow feature finish sales-order
+               #&gt; branch: develop
+            </code></pre></figure>
+            <p><a href="{{base_url}}/2015/12/11/gh-pages/#/">最後に</a></p>
+            <aside class="notes">
+              <p>新しい機能が完成したら、最後にfeatureブランチを終了して、developブランチに統合します。</p>
+
+              <p>このあとreleaseブランチで運用前の検証などを行い、完成品をmasterに統合するのですが、</p>
+              <p>この箇所は普段の開発の中で多発する作業でもないので、</p>
+              <p>今回は短い発表時間ということもあり割愛させていただきます。</p>
+            </aside>
+          </section>
+
+        </div>
+    </div>
+    <script src="/vendor/lib/js/head.min.js"></script>
+    <script src="/vendor/js/reveal.js"></script>
+
+    <script src="/js/app.js"></script>
+
+    <script src="/vendor/plugin/markdown/markdown.js"></script>
+    <script src="/vendor/plugin/highlight/highlight.js"></script>
+    <script src="/vendor/plugin/zoom-js/zoom.js"></script>
+    <script src="/vendor/plugin/notes/notes.js"></script>
+  </body>
+</html>

@@ -8,6 +8,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks "grunt-contrib-copy"
   grunt.loadNpmTasks "grunt-contrib-watch"
   grunt.loadNpmTasks "grunt-exec"
+  grunt.loadNpmTasks('grunt-contrib-copy')
 
   grunt.initConfig
 
@@ -30,6 +31,19 @@ module.exports = (grunt) ->
           expand: true
           cwd: "bower_components/bootstrap/dist/js/"
           src: "bootstrap.min.js"
+          dest: "vendor/js/"
+        }]
+      reveal:
+        files: [{
+          expand: true,
+          cwd: "bower_components/reveal.js/css/",
+          src: ['**'],
+          dest: 'vendor/css/'
+        },
+        {
+          expand: true
+          cwd: "bower_components/reveal.js/js/"
+          src: "reveal.js"
           dest: "vendor/js/"
         }]
 
