@@ -1,18 +1,9 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  <meta charset="utf-8">
-  <link href="http://www.warrantee.co.jp/assets/images/favicon.ico" rel="icon" type="image/ico">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>GitHub Pages</title>
-  <meta name="description" content="">
-  <link rel="canonical" href="http://ogm.greenlatte.space/2015/12/11/gh-pages/">
-
-</head>
-
-  <link rel="stylesheet" href="/vendor/css/reveal.css">
-  <link rel="stylesheet" href="/vendor/css/theme/white.css">
-  <link rel="stylesheet" href="/vendor/lib/css/zenburn.css">
+  {% include head.html %}
+  <link rel="stylesheet" href="{{ "/vendor/css/reveal.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/vendor/css/theme/white.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/vendor/lib/css/zenburn.css" | prepend: site.baseurl }}">
   <!--Add support for earlier versions of Internet Explorer -->
 	<!--[if lt IE 9]>
 	<script src="/vendor/lib/js/html5shiv.js"></script>

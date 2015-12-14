@@ -4,7 +4,9 @@
     <div class="footer-col-1 column">
       <ul>
         <li>{{ site.title }}</li>
-        <li><a href="https://dl.dropboxusercontent.com/u/39427047/github/OGM/Osaka%C3%97Github%20Meetup%21%21.md">プレゼンテーションの原稿</a></li>
+        {% for page in site.pages %}
+          {% if page.title %}<li><a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>{% endif %}
+        {% endfor %}
       </ul>
     </div>
 

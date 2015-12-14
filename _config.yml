@@ -2,6 +2,7 @@
 title: Osaka×GitHub Meetup!!
 email: k.takeuchi@warrantee.co.jp
 description: "[Todo: description]"
+base_url: "http://localhost:4000"
 url: "http://ogm.greenlatte.space"
 twitter_username: u651601f
 github_username:  green-latte
