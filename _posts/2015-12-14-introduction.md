@@ -1,4 +1,0 @@
----
-layout: introduction
-title:  "Introduction"
----
